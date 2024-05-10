@@ -1,0 +1,223 @@
+/* Global Rules */
+
+:root {
+
+    /*Primary*/
+    --Light-red: hsl(0, 100%, 67%);
+    --Orangey-yellow: hsl(39, 100%, 56%);
+    --Green-teal: hsl(166, 100%, 37%);
+    --Cobalt-blue: hsl(234, 85%, 45%);
+
+    /*Gradients*/
+    /* (background) */
+    --Light-slate-blue: hsl(252, 100%, 67%);
+    --Light-royal-blue: hsl(241, 81%, 54%);
+    --Light-red-bg: hsl(0, 100%, 67%, 8%);
+    --Orangey-yellow-bg: hsl(39, 100%, 56%, 8%);
+    --Green-teal-bg: hsl(166, 100%, 37%, 8%);
+    --Cobalt-blue-bg: hsl(234, 85%, 45%, 8%);
+
+    /* Circle */
+    --Violet-blue: hsla(256, 72%, 46%, 1);
+    --Persian-blue: hsla(241, 72%, 46%, 0);
+
+    /* Neutral */
+
+    --White: hsl(0, 0%, 100%);
+    --Pale-blue: hsl(221, 100%, 96%);
+    --Light-lavender: hsl(241, 100%, 89%);
+    --Dark--gray-blue: hsl(224, 30%, 27%);
+
+    /* Body Font size */
+
+    --font-size-paragraphs: 18px;
+}
+
+* {
+
+    font-family: "Hanken Grotesk", sans-serif;
+    box-sizing: border-box;
+    /* font-optical-sizing: auto;
+    font-weight: <weight>;
+    font-style: normal; */
+}
+
+body {
+    display: grid;
+    place-items: center;
+    min-height: 100vh; /* This ensures the body takes up at least the full viewport height */
+}
+
+/* Start Section Styling */
+
+/* .container {
+    display: grid;
+    justify-content: center; /* Center horizontally
+    height: 100vh; /* Full height of the viewport 
+    align-items: center; /* Center vertically if needed
+} */
+
+section {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(200px, 300px));
+    box-shadow: -1px 4px 15px -8px var(--Dark--gray-blue);
+    border-radius: 30px;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    -ms-border-radius: 30px;
+    -o-border-radius: 30px;
+
+}
+
+section .resault {
+    background: linear-gradient(to bottom, var(--Light-slate-blue), var(--Light-royal-blue));
+    border-radius: 30px;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    -ms-border-radius: 30px;
+    -o-border-radius: 30px;
+    text-align: center;
+    
+}
+
+section .resault .yourResault {
+
+    color: var(--Light-lavender);
+}
+
+section .resault .percentage {
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    background: linear-gradient(to bottom, var(--Violet-blue), var(--Persian-blue));
+    width: 100px;
+    height: 100px;
+    margin: 34px auto;
+}
+
+section .resault .percentage h2 {
+
+    color: var(--White);
+    font-size: 50px;
+
+}
+
+section .resault .percentage h6 {
+
+    margin-top: -40px;
+    color: var(--Light-lavender);
+
+}
+
+section .resault .great h2 {
+
+    color: var(--White);
+
+}
+
+section .resault .great p {
+
+    color: var(--Light-lavender);
+    font-size: 12px;
+    margin: 10px 60px;
+
+}
+
+section .summary {
+
+    margin: 10px 30px;
+}
+
+section .summary > div {
+
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 12px;
+    /* padding: 0 30px; */
+    width: 240px;
+    padding: 0px 30px;
+    border-radius: 12px;
+    position: relative;
+} 
+
+section .summary .reaction {
+
+    background-color: var(--Light-red-bg);
+    color: var(--Light-red);
+    
+
+}
+
+section .summary .memory {
+
+    background-color: var(--Orangey-yellow-bg);
+    color: var(--Orangey-yellow);
+
+}
+
+section .summary .verbal {
+
+    background-color:var(--Green-teal-bg) ;
+    color: var(--Green-teal);
+
+}
+
+section .summary .visual {
+
+    background-color: var(--Cobalt-blue-bg);
+    color: var(--Cobalt-blue) ;
+
+}
+
+section .summary div p:first-of-type::before {
+
+    position: absolute;
+    left: 6px;
+}
+
+section .summary .reaction > p:first-of-type:before {
+content: url(../images/icon-reaction.svg);}
+
+section .summary .memory > p:first-of-type:before {
+    content: url(../images/icon-memory.svg);}
+
+section .summary .verbal > p:first-of-type:before {
+    content: url(../images/icon-verbal.svg);}
+
+section .summary .visual > p:first-of-type:before {
+    content: url(../images/icon-visual.svg);}
+
+section .summary button {
+    margin: 18px 12px;
+    width: 240px;
+    border-radius: 20px;
+    outline: none;
+    border: none;
+    height: 38px;
+    background-color: var(--Dark--gray-blue);
+    color: var(--White);
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    transition: 0.5s;
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -ms-transition: 0.5s;
+    -o-transition: 0.5s;
+    cursor: pointer;
+}
+
+section .summary button:hover {
+
+    background-color: var(--Light-slate-blue);
+}
+
+@media (max-width: 591px) {
+
+    section {
+        grid-template-columns: minmax(200px, 300px);
+
+    }
+}
